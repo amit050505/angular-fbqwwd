@@ -16,10 +16,10 @@ export class AppComponent  {
 
   getDetailsForDate() {
     this.dateServive.getDetailsForDate()
-        .map(response => response.json())
-        .subscribe(data => {
+        .pipe(map(response => response.json())) 
+        .subscribe(data =>  {
         console.log(data);
-        
+
     });
   }
 

@@ -9,7 +9,7 @@ export class CalenderService {
 
   constructor(private _http: Http) { }
 
-  getDetailsForDate(): Observable<DayData> {
+  getDetailsForDate() {
 
     return this._http.get('https://datazen.katren.ru/calendar/day/');
   }
