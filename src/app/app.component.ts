@@ -19,6 +19,7 @@ export class AppComponent  {
         .map(response => response.json())
         .subscribe(data => {
         console.log(data);
+        
     });
   }
 
