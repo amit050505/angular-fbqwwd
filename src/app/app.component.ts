@@ -10,8 +10,11 @@ import { Headers, Response, ResponseOptions } from '@angular/http';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+
+  public _today = new Date();
   constructor (private dateServive: CalenderService) {
     this.getDetailsForDate();
+    this.getDetailsForDate_httpClient();
   }
 
   getDetailsForDate() {
@@ -19,7 +22,19 @@ export class AppComponent  {
         .pipe(map(response => response.json())) 
         .subscribe(data =>  {
         console.log(data);
+    });
+  }
+  // getDetailsForDate() {
+  //   this.dateServive.getDetailsForDate()
+  //       .subscribe(data =>  {
+  //       console.log(data);
+  //   });
+  // }
 
+    getDetailsForDate_httpClient() {
+    this.dateServive.getDetailsForDate_httpclient()
+        .subscribe(data =>  {
+        console.log(data);
     });
   }
 
