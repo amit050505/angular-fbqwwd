@@ -3,6 +3,8 @@ import { CalenderService } from './calender.service';
 import { map, take } from 'rxjs/operators';
 import { DayData } from './day-data';
 import { Headers, Response, ResponseOptions } from '@angular/http';
+import { ReversePipe } from './reverse.pipe';
+
 
 @Component({
   selector: 'my-app',
