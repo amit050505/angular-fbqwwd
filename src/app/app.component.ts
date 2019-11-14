@@ -17,6 +17,21 @@ export class AppComponent  {
   constructor (private dateServive: CalenderService) {
     this.getDetailsForDate();
     this.getDetailsForDate_httpClient();
+    
+      
+    this.dateServive.setMessage("task done: -4");
+    this.dateServive.setMessage("task done: -3");
+    this.dateServive.setMessage("task done: -2");
+    this.dateServive.setMessage("task done: -1");  
+    this.dateServive.setMessage("task done: 0");
+    this.dateServive.setMessage("task done: 1");
+
+    this.dateServive.getMessage().subscribe(data=>{
+      console.log(data);
+    });
+    this.dateServive.setMessage("task done: 2");
+    this.dateServive.setMessage("task done: 3");
+
   }
 
   getDetailsForDate() {
